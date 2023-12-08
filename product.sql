@@ -35,8 +35,7 @@ of the customers in "Dargeling" or "Bangalore".
 SQL> select cname from customer where discount =any (select discount from customer
  where city = ’Darjeling’ or city = ’Bangalore’);
 
-2 b K) Retrieve customer ids with smaller discounts than every customer from " 
-Srinagar”
+2bK) Retrieve customer ids with smaller discounts than every customer from "Srinagar"
 SQL> select cid from customer
  where discount < all (select discount from customer 
  where city = ’Srinagar’);
